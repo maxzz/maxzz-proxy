@@ -18,6 +18,7 @@ app.get('/youtube', async (req, res) => {
 });
 
 function notFound(req, res, next) {
+    res.status(404);
     const error = new Error('Not found');
     next(error);
 }
@@ -27,7 +28,6 @@ function errorHandler(error, req, res, next) {
     res.json({
         message: error.message
     });
-
 }
 
 app.use(notFound);

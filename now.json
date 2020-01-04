@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "name": "maxzz-proxy",
+    "builds": [
+        {
+            "src": "src/index.js",
+            "use": "@now/node-server"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/.*",
+            "dest": "src/index.js"
+        }
+    ],
+    "env": {
+        "GOOGLE_API_KEY": "@google_api_key"
+    },
+    "alias": [
+        "maxzz-proxy"
+    ]
+}

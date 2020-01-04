@@ -4,7 +4,9 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js"
+      "start": "node src/index.js",
+      "dev": "nodemon src/index.js",
+      "deploy": "now -e GOOGLE_API_KEY=@google_api_key"
   },
   "dependencies": {
     "cors": "^2.8.5",
